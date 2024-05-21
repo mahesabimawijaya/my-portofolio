@@ -23,7 +23,11 @@ export const Navbar = () => {
   const pathname = usePathname();
   const isActive = (path: string) => pathname === path;
   return (
-    <nav className={`${scrolled ? "bg-white backdrop-blur-md" : "bg-black text-white"} w-full fixed h-[70px] shadow-md font-semibold z-10 flex justify-center items-center space-x-10 duration-200`}>
+    <nav
+      className={`${
+        scrolled ? "bg-white bg-opacity-80 backdrop-blur-md" : "bg-black text-white"
+      } w-full fixed h-[70px] shadow-md font-semibold z-10 flex justify-center items-center space-x-10 duration-200`}
+    >
       <div
         className={`py-1 ${
           isActive("/")
