@@ -140,7 +140,7 @@ export default function Home() {
 
               <div className="flex flex-col">
                 <Reveal>
-                  <div className="font-semibold text-xl w-[95px] md:w-auto">Purwadhika Digital Technology School</div>
+                  <div className="font-semibold text-xl w-[110px] md:w-auto">Purwadhika Digital Technology School</div>
                 </Reveal>
                 <Reveal>
                   <div className={`${darkMode ? "text-slate-300" : "text-slate-700"} italic`}>Full Stack Web Development</div>
