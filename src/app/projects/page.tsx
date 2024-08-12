@@ -4,6 +4,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { Reveal } from "@/components/Reveal";
 import useDarkMode from "@/hooks/useDarkMode";
+import Carousel from "@/components/Carousel";
+
+const slides = ["/projects/palugada.png", "/projects/palugada2.png", "/projects/palugada3.png", "/projects/palugada4.png"];
 
 export default function Projects() {
   const darkMode = useDarkMode();
@@ -13,9 +16,12 @@ export default function Projects() {
         <h1 className={`${darkMode ? "text-white" : ""}  text-4xl font-bold font-Montserrat`}>My Projects</h1>
         <div id="projects-container" className="flex flex-col w-full space-y-20 px-10">
           <div id="palugada" className="flex flex-col bg-white shadow-lg border border-slate-300 h-auto rounded-md">
-            <div className="relative w-full h-[160px] md:h-[320px] lg:h-[390px] border-b opacity-0 animate-slide-in">
-              <Image src={"/projects/palugada.png"} className="rounded-t-md object-cover object-center" fill alt="unify" />
-            </div>
+            <Carousel autoSlide={true}>
+              {slides.map((image, i) => (
+                // eslint-disable-next-line @next/next/no-img-element
+                <img key={i} src={image} className="rounded-t-md object-cover object-center" alt="unify" />
+              ))}
+            </Carousel>
             <div id="project-desc" className="flex flex-col py-6 px-8">
               <div className="flex flex-col space-y-3 mb-5 md:mb-0 md:space-y-0 md:flex-row items-center justify-between">
                 <Reveal>

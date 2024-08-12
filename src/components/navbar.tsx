@@ -9,7 +9,6 @@ import useDarkMode from "@/hooks/useDarkMode";
 export const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const darkMode = useDarkMode();
-  console.log(darkMode);
   useEffect(() => {
     const handleScroll = () => {
       const offset = window.scrollY;
